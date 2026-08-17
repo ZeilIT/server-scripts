@@ -1,5 +1,5 @@
 #!/bin/bash
-exec > /var/log/my-updates/runner.log 2>&1
+exec > /var/log/my-updates/runner-$(date +%Y-%m-%d).log 2>&1
 echo "=== Запуск: $(date) ==="
 cd /home/kydza/repo || { echo "Не могу перейти в repo"; exit 1; }
 echo "Выполняю git pull..."
